@@ -11,3 +11,4 @@ sty/ieeetran.bst
 **:mshield
 **:Zone.Identifier
 Makefile
+__pycache__/**

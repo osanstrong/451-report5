@@ -33,8 +33,8 @@
 \newcommand{\defplot}[2]{\defplotW{#1}{#2}{0.75}}
 
 % Common Macros
-\newcommand{\micCi}{\xspace$\mathrm{\mu Ci}$\xspace}
-\newcommand{\CsSrc}{\xspace$\mathrm{^{137}Cs}$\xspace}
+\newcommand{\micCi}{$\mathrm{\mu Ci}$\xspace}
+\newcommand{\CsSrc}{$\mathrm{^{137}Cs}$\xspace}
 \newcommand{\degr}{$^\circ$\xspace}
 
 \usepackage{placeins} % FloatBarrier
@@ -71,11 +71,11 @@ Photons interact with matter through three primary mechanisms: photoelectric eff
 In the photoelectric effect, relevant for low photon energy and high-z atoms, photons are absorbed by an electron, which may be ejected from the atom if the photon's energy was sufficiently great.
 In pair production, relevant for high photon energy (specifically, greater than 1.022 MeV, twice the rest mass energy of an electron) strikes an atom with enough energy to produce a pair of an electron and positron, which quickly annihilate.
 Finally, in Compton scattering, the photon and electron elastically scatter off of each other.
-While Compton scattering can take place at any incident photon energy, it is most significant in the intermediate energies between where photoelectric effect and pair production dominate, and especially for lower-z material, where neither dominates, as seen in \figref{intr0_effects}.\\
+While Compton scattering can take place at any incident photon energy, it is most significant in the intermediate energies between where photoelectric effect and pair production dominate, and especially for lower-z material, where neither dominates, as seen in \figref{fig:intr0_effects}.\\
 
 \defplotW{intr0_effects}{Regions of photon energy $\bar{h}\omega$ and target proton count where different photon interactions with matter tend to occur. Sourced from Nuclear Radiation Interactions (Second Edition)\cite{yip_nuclear_2025}}{0.6}
 
-Compton scattering is of particular interest due to its kinetic model, as shown in \figref{intr1_kine}, in which the model of an elastic collision, accounting for relativistic behavior, can be used to predict energies based on deflection angle $\theta$.
+Compton scattering is of particular interest due to its kinetic model, as shown in \figref{fig:intr1_kine}, in which the model of an elastic collision, accounting for relativistic behavior, can be used to predict energies based on deflection angle $\theta$.
 In high-z material where Compton scattering dominates, electron binding energy is low enough to be ignored in this model.
 
 \defplotW{intr1_kine}{Kinematics of Compton scattering, in which an incident photon of energy $E$ interacts with an electron at rest, with the photon scattering at angle $\theta$ to a lower energy $E'$ and transferring $E_e=E-E'$ to the ejected electron.}{0.6}
@@ -113,7 +113,7 @@ and the minimum by evaluating at 0$^\circ$~(no deflection):
 
 In this laboratory, we employ a 30 \micCi \CsSrc source, lead bricks used as collimators, a stilbene organic scintillator, a high voltage power supply (HVPS), a NaI(Tl) inorganic detector, and a signal processing fast digitizer.
 
-We arranged the detectors, source, and collimators in a similar fashion to the diagram of \figref{fig:Lab5_setupnot}, as can be seen in \figref{mat0_setup}.
+We arranged the detectors, source, and collimators in a similar fashion to the diagram of \figref{fig:Lab5_setupnot}, as can be seen in \figref{fig:mat0_setup}.
 
 \defplot{Lab5_setupnot}{A similar experimental setup to the one used in this laboratory. Unlike this setup, measurements were performed for inorganic detector placement at angles of 0, 30, 60, and 90 degrees. Sourced from lab manual.\cite{npre_lab_5_manual_2025}}
 \defplot{mat0_setup}{The experimental setup used in this laboratory to measure Compton scattering of photons at angles of 0, 30, 60, and 90 degrees, with positions marked by tape.}
@@ -128,7 +128,7 @@ In this setup, the gamma particles first strike the stilbene organic scintillato
 The gamma rays are scattered to new energies $E'$ at angles $\theta$, and some scatter in the direction of the inorganic detector, arranged at a specific angle.
 We then expected the inorganic detector, having higher-z elements like sodium and iodine, to have a strong photoelectric response corresponding to the energy $E'$ of the gamma rays scattered in its direction.\\
 
-We fed the outputs of both detectors into a fast digitizer, seen in \figref{mat1_digi}, connected to the laboratory computer via a USB cable. The digitizer, with an appropriate ``coincidence window'' set, only passes through detection incidents where both the organic and inorganic detectors produced a response within that window of time from each other, filtering for gamma rays Compton scattered from the organic scintillator at the desired angle into the inorganic detector, and the corresponding Compton electron observations of the organic detector.\\
+We fed the outputs of both detectors into a fast digitizer, seen in \figref{fig:mat1_digi}, connected to the laboratory computer via a USB cable. The digitizer, with an appropriate ``coincidence window'' set, only passes through detection incidents where both the organic and inorganic detectors produced a response within that window of time from each other, filtering for gamma rays Compton scattered from the organic scintillator at the desired angle into the inorganic detector, and the corresponding Compton electron observations of the organic detector.\\
 
 % \defplotW{mat1_digi}{The fast digitizer used in this experiment, with response of the organic scintillator fed into channel 0, response of the inorganic detector fed into channel 1, and output sent through the white USB cable to the laboratory computer.}{0.6}
 \begin{figure}
@@ -149,7 +149,7 @@ This prompted a window with acquisition settings.
 In the `Acquisition' tab, we chose a memorable `Run ID' to name the folder to store files in, and checked the `auto-increment' option to avoid overwriting files.
 We set the desired time, in seconds, in the `Timed run (s)' tab, checked `Save all spectra on stop acquisition', and checked `Energy' and `$\Delta$T' spectra options.\\
 
-In the `Settings' tab, we selected `Input' and `Discrimination' settings shown in \figref{fig:set_input} and \figref{set_discrim}; selected under `QDC' settings a gate of 800 ns, short gate of 400 ns, and pre-gate of 48 ns; and selected under `Onboard coincidences' settings a coincidence window of 96 ns.
+In the `Settings' tab, we selected `Input' and `Discrimination' settings shown in \figref{fig:set_input} and \figref{fig:set_discrim}; selected under `QDC' settings a gate of 800 ns, short gate of 400 ns, and pre-gate of 48 ns; and selected under `Onboard coincidences' settings a coincidence window of 96 ns.
 We left `Energy calibration' settings as defaults, as we would later manually calibrate energy of completed spectra.\\
 
 \defplotW{set_input}{The `Input' settings in Compass used for spectrum recordings in this laboratory.}{0.8}
