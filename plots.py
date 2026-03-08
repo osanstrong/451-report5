@@ -25,7 +25,7 @@ chans_og = np.array([i for i in range(len(spec_00_og))])
 # plt.legend()
 # plt.show()
 
-CS137_PHOTOPEAK = 661.7 # keV
+CS137_PHOTOPEAK = 661.657 # keV
 # Calculate the peak compton? I wonder if organic just doesn't have any photopeak
 # m_e = 0 #kg
 # c = 3e8 #m/s
@@ -58,10 +58,10 @@ E_in = chans_in * C_INORG
 E_og = chans_og * C_ORG
 
 # plt.plot(E_in, spec_00_in, label="Inorganic, calibration")
-# vbar(CS137_PHOTOPEAK, f"Ideal photopeak: {CS137_PHOTOPEAK} keV", c="C2")
+# vbar(CS137_PHOTOPEAK, f"Theoretical photopeak: {CS137_PHOTOPEAK} keV", c="C2")
 
 # plt.plot(E_og, spec_00_og, label="Organic, calibration")
-# vbar(CS137_COMPEAK, f"Ideal Compton edge: {CS137_COMPEAK:.3f} keV", c="C3")
+# vbar(CS137_COMPEAK, f"Theoretical Compton edge: {CS137_COMPEAK:.3f} keV", c="C3")
 # plt.xlabel("E (keV)")
 # plt.ylabel("Counts")
 # plt.xlim(-10, 870)
@@ -79,7 +79,8 @@ specs_og = [readlist(path) for path in paths_og]
 
 ideal_Ee = [get_compton_Ee(CS137_PHOTOPEAK, rad) for rad in angrads]
 ideal_Egp = [get_compton_Egp(CS137_PHOTOPEAK, rad) for rad in angrads]
-
+print(f"Ee: {ideal_Ee}")
+print(f"Egp: {ideal_Egp}")
 # for i in range(len(angles)):
 #     ang = angles[i]
 #     rad = angrads[i]
