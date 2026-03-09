@@ -51,13 +51,13 @@
 \pagebreak
 \pagenumbering{arabic}
 \begin{abstract}
-    A key aspect of photon interaction with matter involves Compton scattering, in which an incident photon elastically scatters off of a discharged electron, the energies of which can be modeled kinematically.
+    A key aspect of gamma ray interaction with matter is Compton scattering, the primary interaction for low-z materials like organics, in which an incident photon elastically scatters off of a discharged electron, the energies of which can be modeled kinematically.
     In this laboratory, we investigate the validity of the kinematic model of Compton scattering, using digitally acquired time-coincident measurements from two detectors.\\
     
-    We measured energy spectra of responses to a 30 \micCi \CsSrc gamma source, by a stilbene organic scintillator and a NaI(Tl) inorganic scintillator, to calibrate energy spectra measurements using these detectors.
-    We collimated the source with lead bricks and configured the organic and inorganic detectors to measure Compton scattering in the organic detector, with Compton electron energies measured by the organic detector, and deflected photons striking the inorganic detector (positioned at specific angles of 0, 30, 60, and 90 degrees), with a fast digitizer to record only simultaneous responses from both detectors (within a window of 96 ns).\\
+    We measured energy spectra of responses to a 30~\micCi \CsSrc gamma source, by a stilbene organic scintillator and a NaI(Tl) inorganic scintillator, to calibrate energy spectra measurements using these detectors.
+    We collimated the source with lead bricks and configured the organic and inorganic detectors to measure Compton scattering in the organic detector, with Compton electron energies measured by the organic detector, and deflected photons striking the inorganic detector (positioned at specific angles of 0, 30, 60, and 90~degrees), with a fast digitizer to record only simultaneous (within a window of 96~ns) responses from both detectors and thus primarily observe scattering events at these angles.\\
 
-    We estimated calibration coefficients of 0.252 keV per channel for the inorganic detector, and 1.92 keV per channel for the organic detector.
+    We estimated calibration coefficients of 0.252~keV per channel for the inorganic detector, and 1.92~keV per channel for the organic detector.
     Using these coefficients, we compared the peak energy response from both detectors at different angles, and found that the peak responses from the organic detector roughly corresponded to the predicted Compton electron energy for each angle, while those from the inorganic detector roughly corresponded to the predicted scattered gamma ray energy for each angle.\\
 
     These results confirm the validity of the kinematic model of Compton scattering, insofar as to predict scattered particle energies, and additionally demonstrate the utility of the fast digitizer, and direct digital acquisition in general, through the effectiveness of time-coincidence filtering to isolate readings corresponding to different angles, and will be useful to those intending to use the kinematic model of Compton scattering, or those considering the use of direct digital acquisition, such as to take time-coincident measurements.
@@ -66,17 +66,17 @@
 
 \section{Introduction and Background}
 
-Photons interact with matter through three primary mechanisms: photoelectric effect, Compton scattering, and pair production.\\
+Gamma radiation interacts with matter through three primary mechanisms: photoelectric effect, Compton scattering, and pair production.\\
 
-In the photoelectric effect, relevant for low photon energy and high-z atoms, photons are absorbed by an electron, which may be ejected from the atom if the photon's energy was sufficiently great.
-In pair production, relevant for high photon energy (specifically, greater than 1.022 MeV, twice the rest mass energy of an electron) strikes an atom with enough energy to produce a pair of an electron and positron, which quickly annihilate.
+In the photoelectric effect, relevant for lower gamma energy and high-z atoms, photons are absorbed by an electron, dislodging it from the atom.
+In pair production, relevant for high photon energy (specifically, greater than 1.022~MeV, twice the rest mass energy of an electron) the gamma ray strikes an atom with enough energy to produce a pair of an electron and positron, which quickly annihilate.
 Finally, in Compton scattering, the photon and electron elastically scatter off of each other.
-While Compton scattering can take place at any incident photon energy, it is most significant in the intermediate energies between where photoelectric effect and pair production dominate, and especially for lower-z material, where neither dominates, as seen in \figref{fig:intr0_effects}.\\
+While Compton scattering can take place at any incident photon energy, it is most significant in the intermediate energies between where photoelectric effect and pair production dominate, and especially for lower-z atoms like the carbon, and hydrogen of organic materials, where neither photoelectric or pair production effects dominate, as seen in \figref{fig:intr0_effects}.\\
 
 \defplotW{intr0_effects}{Regions of photon energy $\bar{h}\omega$ and target proton count where different photon interactions with matter tend to occur. Sourced from Nuclear Radiation Interactions (Second Edition)\cite{yip_nuclear_2025}}{0.6}
 
-Compton scattering is of particular interest due to its kinetic model, as shown in \figref{fig:intr1_kine}, in which the model of an elastic collision, accounting for relativistic behavior, can be used to predict energies based on deflection angle $\theta$.
-In high-z material where Compton scattering dominates, electron binding energy is low enough to be ignored in this model.
+Compton scattering can be modeled kinetically, as shown in \figref{fig:intr1_kine}, in which the model of an elastic collision, accounting for relativistic behavior, predicts energies based on deflection angle $\theta$.
+Electron binding energy is typically low enough to be ignored in this model.\\
 
 \defplotW{intr1_kine}{Kinematics of Compton scattering, in which an incident photon of energy $E$ interacts with an electron at rest, with the photon scattering at angle $\theta$ to a lower energy $E'$ and transferring $E_e=E-E'$ to the ejected electron.}{0.6}
 
@@ -94,7 +94,7 @@ Solving these relationships yields the energy $E_\gamma'$ of the scattered photo
 where $m_e$ is the rest mass of an electron and $c$ the speed of light.\\
 
 This relationship results in a continuous range of Compton electron energy, as depicted in \figref{fig:ideal_spec} ideally and in \figref{fig:blur_spec} with typical broadening effects.
-The maximum energy, corresponding to the ``Compton edge'' seen in these figures, can be found using Equation~\ref{eq:comp_Egp} evaluated at 180$^\circ$~(full backwards deflection):
+The maximum energy, corresponding to the ``Compton edge'' seen in these figures, can be found using Eq.~\ref{eq:comp_Egp} evaluated at 180$^\circ$~(full backwards deflection):
 \begin{equation}\label{eq:comp_max}
     E_{e,max}=E_\gamma-E_\gamma'(180) = E_\gamma-\frac{E_\gamma}{1 + \frac{E_\gamma}{m_ec^2}(1-\cos(180))} = E_\gamma\left(1-\frac{1}{1 + 2\frac{E_\gamma}{m_ec^2}}\right)
 \end{equation}
@@ -111,15 +111,14 @@ and the minimum by evaluating at 0$^\circ$~(no deflection):
 \FloatBarrier
 \section{Experimental Procedure}\label{sec:methods}
 
-In this laboratory, we employ a 30 \micCi \CsSrc source, lead bricks used as collimators, a stilbene organic scintillator, a high voltage power supply (HVPS), a NaI(Tl) inorganic detector, and a signal processing fast digitizer.
+In this laboratory, we employ a 30~\micCi \CsSrc source, lead bricks used as collimators, a stilbene organic scintillator, a high voltage power supply (HVPS), a NaI(Tl) inorganic detector, and a signal processing fast digitizer.
+We arranged the detectors, source, and collimators similarly to the diagram of \figref{fig:Lab5_setupnot}, as can be seen in \figref{fig:mat0_setup}.\\
 
-We arranged the detectors, source, and collimators in a similar fashion to the diagram of \figref{fig:Lab5_setupnot}, as can be seen in \figref{fig:mat0_setup}.
-
-\defplot{Lab5_setupnot}{A similar experimental setup to the one used in this laboratory. Unlike this setup, measurements were performed for inorganic detector placement at angles of 0, 30, 60, and 90 degrees. Sourced from lab manual.\cite{npre_lab_5_manual_2025}}
-\defplot{mat0_setup}{The experimental setup used in this laboratory to measure Compton scattering of photons at angles of 0, 30, 60, and 90 degrees, with positions marked by tape.}
+\defplot{Lab5_setupnot}{A similar experimental setup to the one used in this laboratory. Unlike this setup, measurements were performed for inorganic detector placement at angles of 0, 30, 60, and 90~degrees, and a stilbene organic detector was used rather than Ej-309. Sourced from lab manual.\cite{npre_lab_5_manual_2025}}
+\defplot{mat0_setup}{The experimental setup used in this laboratory to measure Compton scattering of photons at angles of 0, 30, 60, and 90~degrees, with positions marked by tape.}
 
 
-We shielded the \CsSrc beta and gamma source with a 2mm thick aluminum absorber to limit detection to the source's gamma rays. These gamma rays, with uniform energy of 661.657 keV, are useful in this experiment, having consistent energy which is substantially greater than electron rest mass energy but not great enough (1.022 MeV) to initiate pair production.\\
+We shielded the \CsSrc beta and gamma source with a 2mm thick aluminum absorber to limit detection to the source's gamma rays. These gamma rays, with uniform energy of 661.657~keV, are useful in this experiment, having consistent energy which is substantially greater than electron rest mass energy but not great enough (1.022~MeV) to initiate pair production.\\
 
 We attenuated the gamma ray output using lead bricks leaving a half inch thick aperture facing the organic detector.\\
 
@@ -140,54 +139,50 @@ We fed the outputs of both detectors into a fast digitizer, seen in \figref{fig:
 \subsection{Experiment 1: Detector Calibration}
 
 We first connected the stilbene organic detector to the digitzer channel 0 and the HVPS, and applied a negative voltage bias of $-1900$~V to the scintillator.
+Placing the \CsSrc source in front of the organic detector, we measured the spectrum of the organic scintillator's response for three~minutes, to use for energy calibration.\\
 
-Placing the \CsSrc source in front of the organic detector, we measured the spectrum of the organic scintillator's response, to use for energy calibration.\\
+To record such a spectrum, we opened the computer (connected to the digitizer by USB cable) and started the program Compass, then connected to the digitizer board.
+% For data output, we made sure to check the `auto-increment' option (to avoid overwriting files), and to save `Energy' and `$\Delta$T' spectra.\\
 
-To record such a spectrum, we open the computer (connected to the digitizer by USB cable) and start the program Compass, selecting 'Scan' to connect to the digitizer board.
-We clicked `File/New Project' and created a new folder to save acquisition settings and data files, selecting a new folder for each spectrum measurement.
-This prompted a window with acquisition settings.
-In the `Acquisition' tab, we chose a memorable `Run ID' to name the folder to store files in, and checked the `auto-increment' option to avoid overwriting files.
-We set the desired time, in seconds, in the `Timed run (s)' tab, checked `Save all spectra on stop acquisition', and checked `Energy' and `$\Delta$T' spectra options.\\
-
-In the `Settings' tab, we selected `Input' and `Discrimination' settings shown in \figref{fig:set_input} and \figref{fig:set_discrim}; selected under `QDC' settings a gate of 800 ns, short gate of 400 ns, and pre-gate of 48 ns; and selected under `Onboard coincidences' settings a coincidence window of 96 ns.
+We chose input and discrimination settings shown in \figref{fig:set_input} and \figref{fig:set_discrim}; selected (under QDC settings) a gate of 800~ns, short gate of 400~ns, and pre-gate of 48~ns; and selected (under `Onboard coincidences' settings) a coincidence window of 96~ns.
 We left `Energy calibration' settings as defaults, as we would later manually calibrate energy of completed spectra.\\
 
 \defplotW{set_input}{The `Input' settings in Compass used for spectrum recordings in this laboratory.}{0.8}
 \defplotW{set_discrim}{The `Discrimination' settings in Compass used for spectrum recordings in this laboratory.}{0.8}
 
-After finishing spectrum acquisition, we made sure to reboot the digitizer before measuring the next spectrum.
+After finishing spectrum acquisition, we made sure to reboot the digitizer before measuring the next spectrum.\\
 
 
-We then connected the NaI(Tl) inorganic detector to the digitizer channel 1 and a different channel of the HVPS, applying a positive voltage bias of $+1350$~V to the inorganic scintillator.
+We then connected the NaI(Tl) inorganic detector to the digitizer channel 1 and a different channel of the HVPS, applying a positive voltage bias of $+1350$~V to the inorganic scintillator.\\
 
-Placing the \CsSrc source directly in front of the inorganic detector, we measured the spectrum of the inorganic scintillator's response for calibration.\\
+Then, moving the \CsSrc source directly in front of the inorganic detector, we repeated the above process to measure the spectrum of the inorganic scintillator's response over three~minutes for calibration.\\
 
-Using predicted features of response spectra in these materials for 661.657 keV gamma rays, we calculated calibration coefficients to use for future spectra of either detector.
+Using predicted features of response spectra in these materials for 661.657~keV gamma rays, we calculated calibration coefficients to use for future spectra of either detector.
 
 \FloatBarrier\subsection{Experiment 2: Angular Compton Scattering Measurement}\FloatBarrier
 We then measured Compton scattering at different angles using the coincidence mode of the detector.\\
 
-In Compass, we set operation mode to coincidence mode `Paired AND' with a short time window of 96 ns, to filter for output from the two detectors within such a window of each other.\\
+In Compass, we set operation mode to coincidence mode `Paired AND' with a short time window of 96~ns, to filter for output from the two detectors within such a window of each other.\\
 
 Starting with an angle of 0\degr, we set up the two detectors and the (collimated) gamma source described above to measure Compton scattering at that specific angle (shown in \figref{fig:mat0_setup}).
-Ensuring both detectors were properly biased and connected to the digitizer, we recorded the coincidental response spectrum of both detectors for 20 minutes in the 0\degr configuration.
-We then repeated this recording with the inorganic detector moved to the 30\degr position for 20 minutes, and repeated for the 60\degr and 90\degr positions for 30 minutes each.
+Ensuring both detectors were properly biased and connected to the digitizer, we recorded the spectrum of coincidental responses from both detectors for 20~minutes in the 0\degr configuration.
+We then repeated this recording with the inorganic detector moved to the 30\degr position for 20~minutes, and repeated for the 60\degr and 90\degr positions for 30~minutes each.
 
 
 \section{Experimental Results}\label{sec:results}
 \FloatBarrier
 
 The calibration spectra for the inorganic and organic detectors may be viewed in \figref{fig:dual_cal}.
-The spectrum of the inorganic detector (with high-z material) features a prominent photoelectric peak (photopeak) corresponding to the energy of the gamma source (661.657 keV).
-The spectrum of the organic detector (with low-z material) does not feature such a photopeak, but we match the edge of the Compton energy range (Compton edge) to the maximum electron transfer energy using Equation~\ref{eq:comp_max} (477.334 keV).
-These calculations found calibration coefficients of 0.252 keV per channel for the inorganic detector, and 1.92 keV per channel for the organic detector.\\
+The spectrum of the inorganic detector (with high-z material) features a prominent photoelectric peak (photopeak) corresponding to the energy of the gamma source (661.657~keV).
+The spectrum of the organic detector (with low-z material) does not feature such a photopeak, but we match the edge of the Compton energy range (Compton edge) to the maximum electron transfer energy using Eq.~\ref{eq:comp_max} (477.334~keV).
+These calculations found calibration coefficients of 0.252~keV per channel for the inorganic detector, and 1.92~keV per channel for the organic detector.\\
 
 \defplot{dual_cal}{The calibration spectra measured for the organic and inorganic detectors, scaled using known energy values featured in the spectra.}
 
 \FloatBarrier
 % Calibration:
-% 0.251980198019802 keV/chan for inorganic
-% 1.924892774995428 keV/chan for organic
+% 0.251980198019802~keV/chan for inorganic
+% 1.924892774995428~keV/chan for organic
 
 Spectra were successfully measured for scattering targeting the inorganic detector at angles of 0\degr, 30\degr, 60\degr, and 90\degr. 
 These spectra can be found in \figref{fig:og_angles_dual} for the organic detector, and in \figref{fig:in_angles_dual} for the inorganic detector, both calibrated using the previously found calibration coefficients.
@@ -198,14 +193,15 @@ In the same figures are displayed the theoretical Compton electron and photon en
 
 \begin{table}[!htb]
     \centering
-    \caption{The theoretical Compton electron and photon energies $E_e$ and $E_\gamma'$ corresponding to an incoming photon of energy $E_\gamma=661.657$ keV, with photon scattering angles $\theta$ of 0\degr, 30\degr, 60\degr, and 90\degr.}
+    \caption{The theoretical Compton electron and photon energies $E_e$ and $E_\gamma'$ corresponding to an incoming photon of energy $E_\gamma=661.657$~keV, with photon scattering angles $\theta$ of 0\degr, 30\degr, 60\degr, and 90\degr, compared to values estimated from observed angular spectra.}
     \label{tab:comp_E}
-    \begin{tabular}{c|cc}
-        Photon Scattering Angle $\theta$ & $E_e$ (keV) & $E_\gamma'$ (keV) \\\hline
-        0\degr & 0 & 661.7 \\
-        30\degr & 97.8 & 563.8 \\
-        60\degr & 260.0 & 401.6 \\
-        90\degr & 373.3 & 288.3   
+    \begin{tabular}{c|cc|cc}
+        Photon Scattering Angle $\theta$ & $E_e$ (keV) & & $E_\gamma'$ (keV) & \\
+         & Predicted & Observed & Predicted & Observed\\\hline
+        0\degr & 0 & $40\pm10$ & 661.7 & $590\pm10$ \\
+        30\degr & 97.8 & $100\pm10$ & 563.8 & $550\pm10$\\
+        60\degr & 260.0 & $230\pm10$ & 401.6 & $410\pm10$\\
+        90\degr & 373.3 & $360\pm10$ & 288.3 & $290\pm10$
     \end{tabular}
 \end{table}
 
@@ -234,14 +230,14 @@ Our collimation is, additionally, imperfect (still having a somewhat low apertur
 For the angular spectra of the inorganic detectors' response, the background radiation can be observed, but is fairly consistent between angles, making it fairly simple to distinguish between background noise and the peak from scattered Compton photons.\\
 The peak in the inorganic 0\degr spectrum appears to fall below the predicted Compton photon energy, while the peak in the same organic spectrum appears to overestimate the predicted Compton recoil electron energy of 0, suggesting the 0\degr measurement was not in taken while perfectly aligned with the collimator.
 Between the different angular spectra for the organic detector, we observe remaining traces of a Compton continuum matching the unfiltered calibration spectrum.
-This is not unexpected; while we set a tight timing window of 56 ns, it is inevitable that some small number of unrelated Compton electron observations from events unrelated to those reaching the angled inorganic detector were still close enough to either correctly observed photons scattering at that angle, or to unrelated observations by the inorganic detector, to show up on the organic detector's spectra.
+This is not unexpected; while we set a tight timing window of 56~ns, it is inevitable that some small number of unrelated Compton electron observations from events unrelated to those reaching the angled inorganic detector were still close enough to either correctly observed photons scattering at that angle, or to unrelated observations by the inorganic detector, to show up on the organic detector's spectra.
 
 
 \section{Conclusions}\label{sec:conc}
 
-The objectives of the lab were broadly successful. Calibration spectra were successfully measured for the inorganic and organic detectors' responses to 661.657 keV gamma particles, yielding calibration coefficients of 0.252 keV per channel for the inorganic detector, and 1.92 keV per channel for the organic detector.\\
+The objectives of the lab were broadly successful. Calibration spectra were successfully measured for the inorganic and organic detectors' responses to 661.657~keV gamma particles, yielding calibration coefficients of 0.252~keV per channel for the inorganic detector, and 1.92~keV per channel for the organic detector.\\
 
-Spectra were successfully measured of the inorganic and organic detectors' responses to Compton scattering of incident 661.657 keV gamma particles at angles of 0, 30, 60, and 90 degrees.
+Spectra were successfully measured of the inorganic and organic detectors' responses to Compton scattering of incident 661.657~keV gamma particles at angles of 0, 30, 60, and 90~degrees.
 As expected, the peaks measured by the organic detector, which the gamma particles Compton scattered off of, at different angles correspond roughly to the expected Compton electron energy for those angles.
 Likewise, the peak energies measured by the inorganic detector oriented towards these angles correspond roughly to the energies expected of Compton photons scattered in these angles.\\
 
